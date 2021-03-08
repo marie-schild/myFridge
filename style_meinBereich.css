@@ -1,0 +1,145 @@
+.box_style {
+  background-color:rgb(59, 65, 70);
+  color:#FCF8F2;
+  margin-top:50px;
+  margin-right:10%;
+  margin-left:10%;
+  padding-top:50px;
+  padding-bottom:50px;
+  font-family:'Roboto Slab', serif;
+  overflow: hidden;
+  border-radius: 15px;
+  height:auto;
+}
+.boody{
+  padding-left:20%;
+  padding-right:20%;
+}
+.profileboxes{
+  padding-top:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+@media (min-width:768px) {
+  .header-blue {
+    padding-bottom: 10px;
+  }
+}
+
+i.usericon{
+  position: absolute;
+  font-size:400%;
+  color:#FCF8F2;
+  right:25%;
+  
+}
+a.user{
+  position: absolute;
+  color: #6AB04C;
+  text-align:center;
+  right:12%;
+  margin-right:25px;
+ 
+}
+
+a.user:hover{
+  color:#FCF8F2;
+  text-decoration: none;
+ 
+}
+a.btnlink{
+  color:#FCF8F2;
+}
+a.btnlink:hover{
+  text-decoration:none;
+  color:#2B3135;
+}
+
+.setting_elements_style {
+  background-color:#2B3135;
+  width:100%;
+  color:#FCF8F2;
+  padding-left:6px;
+  padding-top:8px;
+  padding-bottom:2px;
+  font-family:'Roboto Slab', serif;
+  overflow: hidden;
+  border-radius: 5px;
+  height:auto;
+  outline:#6AB04C;
+}
+
+hr.textbox{
+    border: 0px;
+    height: 7px;
+    box-shadow: 0 2px 2px 0 #2B3135;
+    background-color:#FCF8F2;
+    text-align:center;
+   
+    margin-left:27%;
+}
+
+h1{
+  color:#6AB04C;
+  text-align:center;
+  
+}
+.btn.options{
+  width:123px;
+  height:123px;
+  padding-top:40px;
+  margin-right:40px;
+  
+}
+btn.profil{
+  
+  background-color:#6AB04C;
+}
+a.profil{
+  color:#FCF8F2;
+}
+a.profil:hover{
+  color:#2B3135;;
+  text-decoration: none;
+}
+a.profilelink{
+  color:#6AB04C;
+  
+}
+a.profilelink:hover{
+  text-decoration:none;
+  color:#FCF8F2;
+}
+.options_box{
+    background: rgb(59, 65, 70);
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top:50px;
+    margin-left:10%;
+    margin-right:10%;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+a.options{
+  color:#FCF8F2;
+  
+}
+a.options:hover{
+  color:#2B3135;
+  text-decoration: none;
+  background-color: none;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
