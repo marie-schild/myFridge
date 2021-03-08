@@ -1,0 +1,156 @@
+/* Navigations-Boxen */
+.container_navigation
+{
+    margin: 60px 30px;    
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box
+{
+    position: relative;
+    flex-basis: 400px;
+    width: 320px;
+    height: 320px;
+    background: #000;
+    margin: 20px;
+    box-sizing: border-box; 
+    overflow: hidden;
+    border-radius: 10px; 
+}
+
+.box .icon
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 0;
+}
+
+
+.box:hover .icon
+{
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.box .icon .fa
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #f1f1f1;
+}
+
+
+.box:hover .icon .fa
+{
+  font-size: 40px;
+}
+
+.box .content
+{
+    position: relative;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.box:hover .content
+{
+   top:100px;
+    opacity: 1;
+}
+
+.box .content h3
+{
+    margin: 0;
+    padding: 0;
+    color: #f1f1f1;
+    font-size: 24px;
+}
+
+.box .content p
+{
+    margin: 0;
+    padding: 0;
+    color: #f1f1f1;
+}
+
+.box:nth-child(1) .icon
+{
+    background: #7492a0;
+}
+
+.box:nth-child(1)
+{
+    background: #9db2bc;
+    
+}
+
+.container_navigation .box:nth-child(2) .icon
+{
+    background: #ca9c61;
+
+}
+
+.container_navigation .box:nth-child(2)
+{
+    background: #ddbf99;
+    
+}
+
+.container_navigation .box:nth-child(3) .icon
+{
+    background: #7492a0;
+
+}
+
+.container_navigation .box:nth-child(3)
+{
+    background: #9db2bc;
+    
+}
+
+.container_navigation .box:nth-child(4) .icon
+{
+    background: #ca9c61;
+
+}
+
+.container_navigation .box:nth-child(4)
+{
+    background: #ddbf99;
+    
+}
+
+.container_navigation .box:nth-child(5) .icon
+{
+    background: #7492a0;
+
+}
+
+.container_navigation .box:nth-child(5)
+{
+    background: #9db2bc;
+    
+}
+/* Ende Navigations-Boxen */
