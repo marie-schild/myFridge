@@ -1,0 +1,26 @@
+h4.rezept{
+  color:#6AB04C;
+}
+
+h5.rezept{
+  color:#2B3135;
+}
+h5.rezeptbtn{
+  color:#2B3135;
+}
+h5.rezeptbtn:hover{
+  color:#FCF8F2;
+}
+
+p.rezept{
+  color:#2B3135;
+}
+
+img.rezept{
+  border-top-left-radius:15px;
+  border-top-right-radius:15px;
+}
+.card.rezept{
+  border-radius:15px;
+  width:15rem;
+}
