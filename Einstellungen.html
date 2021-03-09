@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href="/style_main.css">
+	<link rel="stylesheet" href="/style_meinBereich.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/floating-labels/">
+</head>
+
+<body>
+	<!-- Header -->
+	
+		<div class="header-blue">
+			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+				<div class="container">
+					<img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+                 <a class="navbar-brand" href="/index.html">myFridge</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse"
+                        id="navcol-1"> 
+                       <form class="form-inline mr-auto" target="_self">
+                        </form>
+                        
+                        <ul class="nav navbar-nav">
+                           <span class="navbar-text"> <a href="#" class="login" >Rezepte</a></span>
+                            <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Blog</a>
+                                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">FAQ</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                            </li>
+                           
+                            
+                       </ul> 
+                     </div> 
+                     <a href="/MeinBereich.html" style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;<img src="Bilder/avatare/standard.png" style="height:50px;border-radius:25px;"> </a>
+                </div>
+            </nav> 
+            
+      </div>
+    
+    <!-- Header Ende -->
+
+    <!-- To Top Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-caret-up"></i></button>
+    <!-- End Button to top -->
+
+<div class="box_style">
+  <div class="row">
+    <div class="col-md-9">
+      <h1 style="padding-left:20%;right:30%;"> Einstellungen  </h1>
+      <hr class="textbox" style="left:30%;right:25%;">
+    </div>
+    <div class="col-md-3" style="text-align:right;">
+      <img id="toggleImage" src="Bilder/avatare/standard.png" style="height:100px;margin-right:70px; border-radius:50px;">
+      <p>
+        <div class="dropdown";>
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Profilbild ändern
+          </button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item settings" onclick="toggleImage(1);" href="#">Frau</a>
+        <a class="dropdown-item settings" onclick="toggleImage(2);"  href="#">Mann</a>
+        <a class="dropdown-item settings" onclick="toggleImage(3);" href="#">Standard</a>
+      </div>
+      </div>
+        <!--
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="color: #FCF8F2;outline:none;" >Profilbild ändern</a>
+          <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#" onclick="toggleImage(1)">Woman</a><a class="dropdown-item" role="presentation" href="#" onclick="toggleImage(2)">Man</a><a class="dropdown-item" role="presentation" href="#" onclick="toggleImage(3)">Standard</a></div>
+          -->
+      </p>
+      <script>
+      function toggleImage(imgEl) {
+      var img1 = "Bilder/avatare/woman.png";
+      var img2 = "Bilder/avatare/man.png";
+      var img3 = "Bilder/avatare/standard.png";
+   
+      var imgElement = document.getElementById('toggleImage');
+
+      if(imgEl === 1)
+        {
+          imgElement.src = (imgElement.src === img1)? img2 : img1;
+        }else if(imgEl ===2){
+          imgElement.src = (imgElement.src === img2)? img1 : img2;
+        }else if(imgEl ===3){
+          imgElement.src = (imgElement.src === img3)? img1 : img3;
+        }
+      }
+</script>
+
+
+
+
+    </div>
+  </div>
+  <div class="row boody">
+    <div class="col-md">    
+      <p>Vorname</p>
+      <div contenteditable="true" class="setting_elements_style"><h4>Oliver</h4></div>
+      
+      <p class="settings_elements_style">Nachname</p>
+      <div contenteditable="true" class="setting_elements_style"><h4>Gräf</h4></div>
+      <p class="settings_elements_style">E-Mail</p>
+      <div contenteditable="true" class="setting_elements_style"><h4>O.Gräf@gmail.com</h4></div>
+      <p class="settings_elements_style">Ernährungstyp </p>
+      <div contenteditable="true" class="setting_elements_style"><h4>Veganer</h4></div>
+      <br>
+    </div>
+  </div>
+  <div class="row boody">
+    <div class="col-md-6">
+      <p style="color:#6AB04C;">Passwort ändern</p>
+    </div>
+    <div class="col-md-6">
+      <p>Account löschen</p>
+    </div>
+  </div>
+</div>
+   
+<!-- Footer -->
+  <hr class = "footerline"> 
+    <div class="footer">
+        <footer>
+            <div class="container">
+                <div class="row">
+                  
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Home</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Kontakt</a></li>
+                            <li><a href="/Impressum.html">Impressum</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>myFridge</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Rezepte</a></li>
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Download</h3>
+                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
+                       <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
+                        <a href="#">
+                        <img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
+                    </div>
+                    <div class="col item social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">© 2021 myFridge GmbH. All Rights reserved. </p>
+            </div>
+        </footer>
+    </div>
+<!-- Footer Ende -->
+
+<!-- Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header border-bottom-0">
+              <button type="button" class="close">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-title text-center">
+                <h1>Login</h1>
+              </div>
+              <div class="d-flex flex-column text-center">
+                <form>
+                  <div class="form-group">
+                    <input class="form-control" type="email" id="email1" placeholder="Deine Email-Adresse...">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password1" placeholder="Dein Passwort...">
+                  </div>
+                  <div class="signup-section text-left">
+                    <h4><a href="#">Passwort vergessen?</a><h4>
+                  </div>
+                  <button type="button" class="btn btn-block btn-round">Login</button>
+                </form>
+              </div>
+            </div>
+              <div class="modal-footer justify-content-center">
+                <div class="signup-section">
+                  <h4>Noch kein Mitglied? <a href="/registrierung.html">Jetzt Registrieren</a></h4>
+                </div>
+              </div>
+        </div>
+    </div>
+  </div>
+<!-- Login Ende-->    
+
+<script src="/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+   
+   
+   
+<script>
+  //Get the button:
+  mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+</script>
+
+
+</body>
+
+</html>
