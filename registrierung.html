@@ -124,14 +124,21 @@ xhr.onreadystatechange = function () {
       console.log(xhr.status);
       console.log(xhr.responseText);
    }};
-
+/*
 var data = {
   "vorname": vorname.value,
   "nachname": nachname.value,
   "email": email.value,
   "passwort": passwort.value
 };
-
+*/
+var data = { 
+  vorname: vorname.value, 
+  nachname: nachname.value, 
+  email: email.value,
+  passwort: passwort.value };
+// Sending data with the request 
+var json = JSON.stringify(data);
 xhr.send(data);
 
 }
