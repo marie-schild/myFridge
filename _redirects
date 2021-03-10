@@ -1,1 +1,1 @@
-/registrierung.html  http://myfridge-backend.herokuapp.com/api/registration:splat  200
+/api/*  http://myfridge-backend.herokuapp.com/api/:splat  200
