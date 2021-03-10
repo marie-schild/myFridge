@@ -1,2 +1,0 @@
-[[redirects]]
-  /api/*  http://myfridge-backend.herokuapp.com/api/registration:splat  200
