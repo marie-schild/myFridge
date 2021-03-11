@@ -120,7 +120,7 @@ function loginForm() {
   
   var passwort1 = document.getElementById("passwort1");
   
-  var url = "http://myfridge-backend.herokuapp.com/api/login";
+  var url = "https://myfridge-backend.herokuapp.com/api/login";
   
   var xhr = new XMLHttpRequest();
   xhr.open("POST", url);
