@@ -23,7 +23,7 @@ function updateSubmit(e) {
     });
 }
 
-function signupSubmit(e) {
+function loginSubmit(e) {
     e.preventDefault();
 
     const formData = new FormData(e.target);
@@ -35,6 +35,24 @@ function signupSubmit(e) {
     }
 
     postData('login', data, headers)
+    .then(res =>{
+        localStorage.setItem('token', res.token);
+        user = res;
+    });
+}
+
+function registerSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    let data = {};
+    formData.forEach((value, key) => data[key] = value);
+
+    const headers = {
+        "Content-Type": "application/json"
+    }
+
+    postData('registration', data, headers)
     .then(res =>{
         localStorage.setItem('token', res.token);
         user = res;
