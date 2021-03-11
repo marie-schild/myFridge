@@ -24,14 +24,21 @@ xhr.onreadystatechange = function () {
       console.log(xhr.responseText);
    }};
 
-var data = {
+var data = JSON.stringify({
   "vorname" : vorname.value,
   "nachname": nachname.value,
   "email" : email.value,
-  "passwort" : passwort.value
-};
+  "passwort" : passwort.value,
+  "ernaehrungstyp": ernaehrungstyp.value
+});
 
 xhr.send(data);
+
+if (xhr.status === 200) {
+  alert("Sie haben sich als"+ vorname.value + " " + nachname.value + "registriert. Sie können sich nun einloggen");
+}
+
+document.write(xhr + xhr.status);
 
 }
 /*
@@ -105,3 +112,38 @@ xhr.send(data);
 //  })
 //});
 */
+
+function loginForm() {
+  
+  var email1 = document.getElementById("email1");
+  // let email = document.querySelector('#email');
+  
+  var passwort1 = document.getElementById("passwort1");
+  
+  var url = "http://myfridge-backend.herokuapp.com/api/login";
+  
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", url);
+  
+  xhr.setRequestHeader("Content-Type", "application/json");
+  
+  xhr.onreadystatechange = function () {
+     if (xhr.readyState === 4) {
+        console.log(xhr.status);
+        console.log(xhr.responseText);
+     }};
+  
+  var data = JSON.stringify({
+    "email" : email1.value,
+    "passwort" : passwort1.value
+});
+  
+  xhr.send(data);
+  
+  if (xhr.status === 200) {
+    alert("Sie haben sich als"+ vorname.value + " " + nachname.value + "registriert. Sie können sich nun einloggen");
+  }
+
+  document.write(data + xhr + xhr.status);
+  
+  }
