@@ -11,7 +11,7 @@ var email = document.getElementById("email");
 
 var passwort = document.getElementById("passwort");
 
-var url = "http://myfridge-backend.herokuapp.com/api/registration";
+var url = "https://myfridge-backend.herokuapp.com/api/registration";
 
 var xhr = new XMLHttpRequest();
 xhr.open("POST", url);
