@@ -61,7 +61,14 @@ a:visited {
   background-color: transparent;
   text-decoration: none;
 }
-
+.dropdown-menu.settings{
+  background-color:#2B3135;
+  color:#FCF8F2;
+}
+.dropdown-item:hover{
+  background-color:rgb(59, 65, 70);
+  color: #6AB04C;
+}
 /* Top Button */
 #myBtn {
   display: none; /* Hidden by default */
