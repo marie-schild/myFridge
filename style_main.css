@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
-
-@font-face {
-    font-family: 'Pineapple Grass';
-    src: url('Pineapple Grass.otf')
-    format('otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Roboto+Slab:wght@500&display=swap');
 
 * {
     box-sizing: border-box;
@@ -41,6 +35,10 @@ h1 {
 
 h2 {
   font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 h4 {
@@ -145,10 +143,11 @@ hr.header {
 }
 
 .header-blue .navbar .navbar-brand {
-  font-size: 25px;
-  font-family: Pineapple Grass;
+  font-size: 28px;
+  font-family: 'Handlee', cursive;
   color:inherit;
   text-decoration: none;  
+  transition: 0.4s;
 }
 
 .header-blue .navbar .navbar-brand:hover {
@@ -175,6 +174,7 @@ hr.header {
   text-decoration:none;
   margin-left: 25px;
   outline:none;
+  transition: 0.4s;
 }
 .header-blue .navbar .navbar-collapse span .login:visited {
   outline:none;
@@ -184,9 +184,7 @@ hr.header {
   color:#2B3135;
   border-bottom: 4px solid #2B3135;
    transition: 0.4s;
-   outline:none;
-  
-  
+   outline:none;  
 }
 
 
@@ -516,4 +514,10 @@ hr.footerline {
     background-color: #2B3135;
   }
 
+  .false-login-div{
+    background: rgb(184, 78, 78);
+    color: #FCF8F2;
+    font-size: 18px;
+  }
+  
   /* Ende Login-Bereich */
