@@ -79,7 +79,7 @@ function loginForm() {
 
           localStorage.setItem("global_token", json.token);
 
-          window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/MeinBereich.html";
+          window.location = "https://zealous-brown-3f1929.netlify.app/MeinBereich.html";
         } else {
         document.getElementById("false-login").innerHTML = "Email oder Passwort ist falsch";
         }
@@ -177,7 +177,7 @@ function logoutUser(){
     .then(res =>{
         console.log(res);
         localStorage.setItem('global_token', '');
-        window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/index.html";
+        window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
     });
 }
 
@@ -202,7 +202,7 @@ function updateUser(){
     .then(res =>{
         console.log(res);
         alert("Deine Daten wurden erfolgreich geändert");
-        window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/MeinBereich.html";
+        window.location = "https://zealous-brown-3f1929.netlify.app/MeinBereich.html";
     });
 }
 
