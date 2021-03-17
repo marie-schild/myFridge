@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mein Bereich</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href="/style_main.css">
+  <link rel="stylesheet" href="/style_rezepte.css">
+
+  <!-- Für den Button: - + -->
+<!--  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+-->
+	
+  
+</head>
+
+<body onload="bild_abfrage('eBild8')">
+	<!-- Header -->
+	<div>
+		<div class="header-blue">
+			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+				<div class="container">
+					<a href="/index.html">
+            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+          </a>
+          <a class="navbar-brand" href="/index.html">
+            <b>myFridge</b>
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navcol-1"> 
+            <form class="form-inline mr-auto" target="_self">
+            </form>
+                
+            <ul class="nav navbar-nav">
+              <span class="navbar-text">
+                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+              </span>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
+
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
+                  <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
+                </div>
+              </li>
+            </ul>
+
+            <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
+              <div class="dropdown";>
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img id="eBild8" src="" style="height:50px;border-radius:25px;"> 
+                </a>
+            
+                    
+                <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
+                  <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
+                </div>
+              </div>
+            </a>
+
+          </div>             
+        </div>          
+      </nav> 
+    </div>
+  </div>
+ <!-- Header Ende -->
+
+
+    <!-- Rezept Seite -->
+<div class="row">
+  <div class="col">
+    <div class="container justify-content-center" style="margin-left:10%;margin-right:10%;text-align:center">
+      <img src="/Bilder/Rezepte/brownies.png" style="width:100%">
+      <h1 class="rezeptue">Salted Caramel Brownies</h1>
+      <br>
+       
+      <h3><img src="Bilder/avatare/Standard.png" style="height:50px;border-radius:25px;"><span style="color:#FCF8F2;">&nbsp;&nbsp; Erstellt von:</span> <span style="color:#6AB04C;">Oliver Gräf</span></h3>
+      <br>
+      <hr class="textbox">
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="container" style="margin-left:10%;margin-right:10%;">
+      <p>Bei diesen Salted Caramel Brownies verschlägt es uns glatt die Sprache. Sie sind so unfassbar lecker! Das liegt natürlich vorallem an unserer unwiederstehlichen Protein Cream Salted Caramel. Wenn wir sie nicht gerade direkt vom Löffel naschen, kommt sie am liebsten auf gesunde, frisch gebackene Brownies. Wer kann dieser Kombination noch wiederstehen?
+      </p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="margin-left:10%; margin-right:10%;padding-top:50px;">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 style="color:#6AB04C;">Zutaten</h2>
+      <p> für <span class="countbox">
+        <span class="number">
+	        <span class="minus" onclick="remove()" >-</span>
+	          <input type="text" value="1"/>
+            Person(en) 
+	        <span class="plus" onclick="add()">+</span>
+        </span>
+      </span>
+    </div>
+    <div class="col-md-6">
+      <h2 style="color:#6AB04C;text-align:right;">Nährwerte</h2>
+      <p style="text-align:right;">pro Portion</p>
+    </div>
+  </div>
+</div>
+<!-- Zutatenliste -->
+<div style="float:left;margin-left:10%;">
+<div class="zutaten">
+    <table>
+    <tr>
+      <th class="einh abstand" id="z0" value="200">200</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">Kristallzucker
+      <br></th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z1">80</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">Butter</th>
+    </tr>
+    <tr>
+
+      <th class="einh abstand" id="z2">120</th>
+      <th class="einh abstand2">ml</th>
+      <th class="abstand3">Schlagsahne</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z3">1</th>
+      <th class="einh abstand2">TL</th>
+      <th class="abstand3">Meersalz</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z4">170</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">dunkle Schokolade</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z5">225</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">Butter</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z6">400</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">Feinkristallzucker</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z7">4</th>
+      <th class="einh abstand2">Stck.</th>
+      <th class="abstand3">Eier</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z8">1</th>
+      <th class="einh abstand2">TL</th>
+      <th class="abstand3">Vanilleextrakt</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z9">140</th>
+      <th class="einh abstand2">g</th>
+      <th class="abstand3">Mehl</th>
+    </tr>
+    <tr>
+      <th class="einh abstand" id="z10">1</th>
+      <th class="einh abstand2">Stck.</th>
+      <th class="abstand3">Meersalzflocken</th>
+    </tr>
+    </table>
+  </div>
+</div>
+<!-- Ende Zutatenliste-->
+<!-- Nährwerte -->
+<div style="float:right;margin-right:10%;margin-left:10%;">
+<div class="zutaten">
+    <table>
+    <tr>
+      <th class="einh">Vegetarisch &nbsp;</th>
+      <th style="text-align:right;">Ernährungstyp</th>
+    </tr>
+    <tr>
+      <th class="einh">55 Min</th>
+      <th style="text-align:right;">Zeit</th>
+    </tr>
+    <tr>
+
+      <th class="einh">Leicht</th>
+      <th style="text-align:right;">Schwierigkeit</th>
+    </tr>
+    <tr>
+      <th class="einh">5 Sterne</th>
+      <th style="text-align:right;">Bewertung</th>
+    </tr>
+    </table>
+  </div>
+
+</div>
+<!-- Ende Nährwerte -->
+<div style="float:right;margin-right:10%;margin-left:10%;">
+<div class="zutaten">
+    <table>
+    <tr>
+      <th class="abstand">KCAL</th>
+      <th class="abstand">Proteine</th>
+      <th class="abstand">Fett</th>
+      <th class="abstand">KH</th>
+    </tr>
+    <tr>
+      <th class="einh abstand">135</th>
+      <th class="einh abstand">6g</th>
+      <th class="einh abstand">7g</th>
+      <th class="einh abstand">12g</th>
+    </tr>
+    
+    </table>
+</div>
+</div>
+<div class="col">
+  <div class="row">
+    <h2 style="margin-left:10%;color:#6AB04C;margin-top:50px;margin-bottom:50px;">Zubereitung</h2>
+  </div>
+</div>
+<!-- Rezeptschritte -->
+<br><br>
+<div class="steps">
+<div class="row">
+  <div class="col">
+  <table>
+    <tr>
+      <th class="abstand"><span class="step">1</span></th>
+      <th><p> Alle Zutaten abgemessen neben den Herd bereit. Zucker bei mittel-großer Hitze in einem mittelgroßen Topf erhitzen. Wenn der Zucker beginnt sich aufzulösen, mit einer hitzebeständigen Teigspachtel oder einem Schneebesen sanft rühren damit sich der Zucker gleichmäßig erhitzt wird schmilzt. Wenn (fast) der ganze Zucker flüssig geworden ist und eine hellbraune (karamell) Farbe angenommen hat, Butter hinzufügen und rühren bis sich die Butter aufgelöst hat. VORSICHT: die heiße Mischung wird kräftig aufkochen. Mit Schlagobers aufgießen und rühren. Noch einmal VORSICHT, denn die heiße Mischung wird heftig aufschäumen und eventuell spritzen.</p>
+      <hr class="textbox">
+      <br>
+      </th>
+    </tr>
+    <tr>
+      <th class="abstand"><span class="step">2</span>&nbsp;</th>
+      <th>
+        <p>Hitze reduzieren und für 2-3 Minuten köcheln und rühren. Vom Herd nehmen. Um nicht aufgelöste Kristallklumpen zu entfernen, gieße die Karamellsauce durch ein Sieb in einen hitzebeständigen Behälter. Salz unterrühren. Karamellsauce wird beim Abkühlen dickflüssiger.</p>
+      <hr class="textbox">
+      <br>
+      </th>
+    </tr>
+    <tr>
+      <th class="abstand"><span class="step">3</span>&nbsp;</th>
+      <th><p>Schokolade und Butter in einer großen Schüssel über einem Wasserbad (das Wasser darf aber nicht kochen) schmelzen, öfters umrühren. Alternativ kannst du Schokolade und Butter in eine große Glasschüssel geben und in der Mikrowelle bei 600 Watt in 30 Sekunden Intervallen erwärmen und dazwischen immer rühren bis die Schokomasse glatt wird. Abkühlen lassen bis die Masse kaum noch warm ist. Währenddessen den Ofen auf 175°C vorheizen und die Backform (ca. 23×33 cm) ausbuttern.</p>
+    <hr class="textbox">
+    <br>
+    </th>
+  </tr>
+  <tr>
+    <th class="abstand"><span class="step">4</span>&nbsp;</th>
+    <th><p>Zucker, Eier und Vanille mit der Schokomasse verrühren. Die Masse mit einem Teigspachtel leicht schlagen bis alles gut vermischt ist. Mehl unterheben.</p>
+    <hr class="textbox">
+    <br>
+    </th>
+  </tr>
+  <tr>
+    <th class="abstand"><span class="step">5</span>&nbsp;</th>
+    <th><p>Masse in die gebutterte Form streichen. Ca. 10 Esslöffel Karamellsauce über die Browniemasse löffeln. Mit einem Messer ein paar Mal hin und her fahren (große Bogen machen) bis eine schöne Marmorierung entstanden ist. Nicht zu viel marmorieren, sonst geht der Effekt verloren. Brownies mit Meersalzflocken bestreuen und dann für 30 Minuten backen. Brownies aus dem Backofen nehmen und in der Form auf einem Gitter auskühlen lassen. Warm servieren, dazu warme Karamellsauce und eventuell Vanilleeis.</p>
+    <hr class="textbox">
+    <br></th>
+  </tr>
+  <tr>
+    <th class="abstand"><img src="/Bilder/Rezepte/grin.png" style="height:80px;">&nbsp;</th>
+    <th><p>Lass es dir schmecken!</p></th>
+  </tr>
+  </table>
+  </div>
+</div>
+</div>
+
+<!-- Ende Rezeptschritte -->
+<!-- Kommentare -->
+<div class="row">
+  <div class="col">
+  
+    <h2 style="margin-left:10%;color:#6AB04C;margin-top:50px;margin-bottom:50px;">Kommentare
+  </h2> 
+  </div>
+</div> 
+<div class="row" style="margin-left:13%;margin-bottom:50px;">
+  <div class="col-md-1">
+  </div>
+  <div class="col-md-11">
+    <div class="rate">
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+  </div>
+</div>
+<div class="row" style="margin-left:10%;margin-bottom:50px">
+  <div class="col-md-1">
+      <img src="Bilder/avatare/Standard.png" style="height:80px;border-radius:40px;"> </a>
+  </div>
+  <div class="col-md-11">
+  <textarea class="comment">Kommentar...</textarea>
+      
+  </div>
+</div>
+
+
+<!-- Kommentare Ende -->
+
+<!-- Ende Rezept Seite -->
+<!-- FOOTER -->
+  <hr class = "footerline"> 
+    <div class="footer">
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-3 item">
+              <h3>H o m e</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Impressum</a></li>
+              </ul>
+            </div>
+                    
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>M y  F r i d g e </h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Rezepte</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-6 item text">
+                        <h3>D O W N L O A D</h3>
+                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
+                        <a href="#">
+                        <img class = "app" src="/Bilder/applestore.png" height="45"></a>
+                        <a href="#">
+                          <img class = "app" src="/Bilder/googleplay.png" height="45"></a>
+                        <a href="#">
+                        
+                    </div>
+
+                    <div class="col item social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="copyright">© 2021 myFridge GmbH. All Rights reserved. </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Login Einblendung -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="close">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-title text-center">
+          <h1>Login</h1>
+        </div>
+        <div class="d-flex flex-column text-center">
+          <form name="signup-form" onsubmit="loginForm()">
+            <div class="form-group">
+              <input class="form-control" type="email" id="email1" placeholder="Email-Adresse..." value="">
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control" id="passwort1" placeholder="Passwort..." value="">
+            </div>
+            <div class="signup-section text-left">
+              <h4><a href="#">Passwort vergessen?</a><h4>
+            </div>
+              <input type="submit" class="btn btn-block btn-round" value="Login">
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <div class="signup-section">
+          <h4>Noch kein Mitglied? <a href="/registrierung.html">Jetzt Registrieren!</a></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- Footer Ende -->
+    <script src="/script.js"></script>
+    <script src="/js/requests.js"></script>
+    <script src="/js/handleForms.js"></script>
+    <!--<script src="js/addons/rating.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).ready(function() {
+			$('.minus').click(function () {
+				var $input = $(this).parent().find('input');
+				var count = parseInt($input.val()) - 1;
+				count = count < 1 ? 1 : count;
+				$input.val(count);
+				$input.change();
+				return false;
+			});
+			$('.plus').click(function () {
+				var $input = $(this).parent().find('input');
+				$input.val(parseInt($input.val()) + 1);
+				$input.change();
+				return false;
+			});
+		});
+    </script>
+    
+    <script>
+    
+    var formerValue=[0,0,0,0,0,0,0,0,0,0,0];
+   
+    var count=[false,false,false,false,false,false,false,false,false,false,false];
+    
+    function getFormerValue(i){
+
+      if(count[i] === false){
+        formerValue[i] = parseInt(document.getElementById('z'+i).innerHTML);
+        count[i]=true;
+      }
+      return formerValue[i];
+    }
+      function add(){
+        for(i=0;i<11;i++){
+          let addnum = document.getElementById('z'+i).innerHTML;
+          addnum = parseInt(addnum);
+          addnum +=getFormerValue(i);
+          document.getElementById('z'+i).innerHTML = addnum;
+        }
+        
+      }
+      function remove(){
+        if(parseInt(document.getElementById('z0').innerHTML)!=formerValue[0]){
+          for(i=0;i<11;i++){
+          let addnum = document.getElementById('z'+i).innerHTML;
+          addnum = parseInt(addnum);
+          if(addnum > 0){
+            addnum -=getFormerValue(i);
+          }
+          document.getElementById('z'+i).innerHTML = addnum;
+          }
+        }
+        
+        
+      }
+      
+    </script>
+</body>
+
+</html>
