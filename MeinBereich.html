@@ -15,33 +15,63 @@
   
 </head>
 
-<body>
+<body onload="name_abfrage(), bild_abfrage('eBild3'), bild_abfrage('eBild4')">
 	<!-- Header -->
 	<div>
 		<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
 				<div class="container">
-					<img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
-                 <a class="navbar-brand" href="/index.html">myFridge</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse"
-                        id="navcol-1"> 
-                       <form class="form-inline mr-auto" target="_self">
-                        </form>
-                        
-                        <ul class="nav navbar-nav">
-                           <span class="navbar-text"> <a href="#" class="login" >FAQ</a></span>
-                            <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Blog </a>
-                                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                            </li>    
-                       </ul>
-                        <a href="/MeinBereich.html" style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;<img src="Bilder/avatare/standard.png" style="height:50px;border-radius:25px;"> </a>
-                     </div> 
-                    
-                </div>
+					<a href="/index.html">
+            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+          </a>
+          <a class="navbar-brand" href="/index.html">
+            <b>myFridge</b>
+          </a>
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navcol-1"> 
+            <form class="form-inline mr-auto" target="_self">
+            </form>
                 
-            </nav> 
-      </div>
+            <ul class="nav navbar-nav">
+              <span class="navbar-text">
+                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+              </span>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
+
+                <div class="dropdown-menu" role="menu">
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
+                  <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
+                </div>
+              </li>
+            </ul>
+
+            <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
+              <div class="dropdown";>
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img id="eBild3" src="" style="height:50px;border-radius:25px;"> 
+                </a>
+            
+                    
+                <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
+                  <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
+                </div>
+              </div>
+            </a>
+
+          </div>             
+        </div>          
+      </nav> 
     </div>
+  </div>
     <!-- Header Ende -->
 
     <!-- Boxen -->
@@ -49,10 +79,10 @@
      <div class="options_box">
         <div class="row align-items-center">
             <div class="col-md-9">
-              <h1 style="padding-left:20%;right:30%;"> <span style="color:#FCF8F2">Hallo </span>Oliver!</h1>
+              <h1 style="padding-left:20%;right:30%;"> <span style="color:#FCF8F2"> Hallo </span> <span id="mein_bereich_name"></span>&nbsp;! </h1>
             </div>
             <div class="col-md-3" style="text-align:right;">
-              <img src="Bilder/avatare/standard.png" style="height:100px;margin-right:70px; border-radius:50px;">
+              <img id="eBild4" src="" style="height:100px;margin-right:70px; border-radius:50px;">
             </div>
         </div>
       <div class="row align-items-center boody">
@@ -75,71 +105,7 @@
     </div> 
 
     <!-- Boxen Ende -->
-  
-  <!-- Navigationsboxen NEW -->
- <div class="options_box">
-   <div class="row align-items-center">
-            <div class="col-md-9">
-              <h1 style="padding-left:20%;right:30%;"> <span style="color:#FCF8F2">Hallo </span>Oliver!</h1>
-            </div>
-            <div class="col-md-3" style="text-align:right;">
-              <img src="Bilder/avatare/standard.png" style="height:100px;margin-right:70px; border-radius:50px;">
-            </div>
-        </div>
 
-<div class="container_navigation"> 
-   <div class="boxes" >
-     
-      <div class="box">
-       <div class="icon"><i class="fa fa-fire" aria-hidden="true"></i></div>
-       <div class="content">
-            <a href="/MeineRezepte.html"><h3>Meine Rezepte</h3></a> 
-       </div>
-   </div>
-
-<div class="box">
-       <div class="icon"><i class="fa fa-heart" aria-hidden="true"></i></div>
-       <div class="content">
-           <a href="#"><h3>Gespeicherte Rezepte</h3></a> 
-       </div>
-   </div>
-  
-   <div class="box">
-       <div class="icon"><i class="fa fa-cog" aria-hidden="true"></i></div>
-       <div class="content">
-           <a href="/Einstellungen.html"><h3>Einstellungen</h3></a>
-       </div>
-   </div>
-    </div>
-  </div>
-
-<div class="container_navigation">
-<div class="boxes" >
-   <div class="box">
-       <div class="icon"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
-       <div class="content">
-           <a href="#"><h3> Meine Beiträge</h3></a> 
-       </div>
-   </div>
-
-   <div class="box">
-       <div class="icon"><i class="fa fa-bookmark" aria-hidden="true"></i></div>
-       <div class="content">
-           <a href="#"><h3> Gespeicherte Beiträge </h3></a>
-           <h5>Bei Fragen und Anmerkungen stehen wir gerne zur Verfügung. Kontaktiere uns gerne direkt über unser Formular oder schau Dir an, wo Du uns finden kannst.</h5>  
-       </div>
-   </div>
-
-    <div class="box">
-       <div class="icon"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
-       <div class="content">
-           <a href="#"><h3> Meine Einkaufsliste</h3></a> 
-       </div>
-   </div>
-   </div>
-</div>
-</div>
-<!-- Navigationsboxen NEW Ende -->
 
 <!-- FOOTER -->
   <hr class = "footerline"> 
@@ -222,12 +188,11 @@
     
     <!-- Footer Ende -->
     <script src="/script.js"></script>
+    <script src="/js/requests.js"></script>
+    <script src="/js/handleForms.js"></script>
+    <script src="/js/requests.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      
-    </script>
 
 
 </body>
