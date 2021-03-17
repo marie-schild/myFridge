@@ -11,11 +11,45 @@ h5.rezeptbtn{
 h5.rezeptbtn:hover{
   color:#FCF8F2;
 }
-
+textarea.comment{
+ width:70%; 
+ margin-left:50px;background-color:#2B3135;border-width:2px;
+ border-color:#FCF8F2;height:250px;color:#FCF8F2;
+ padding:15px;
+ border-radius:15px;
+}
+textarea.comment:hover{
+ outline:none;
+}
 p.rezept{
   color:#2B3135;
 }
+.zutaten{
+  margin-bottom:50px;
+  background-color: rgb(59, 65, 70);
+  color:#FCF8F2;
+  border-radius:15px;
+  padding:50px;
+  
+}
+th.abstand{
+  padding-right:5px;
+  text-align:right;
+}
 
+th.abstand2{
+  padding-right:10px;
+  border-right:solid;
+  border-color:#FCF8F2;
+
+}
+th.abstand3{
+  padding-left:15px;
+
+}
+.einh{
+  color:#6AB04C;
+}
 img.rezept{
   border-top-left-radius:15px;
   border-top-right-radius:15px;
@@ -23,4 +57,104 @@ img.rezept{
 .card.rezept{
   border-radius:15px;
   width:15rem;
+}
+h1.rezeptue{
+  text-align:center;
+  margin-top:50px;
+  color:#6AB04C;
+}
+
+hr.textbox{
+    border: 0px;
+    height: 7px;
+    box-shadow: 0 2px 2px 0 #2B3135;
+    background-color:#FCF8F2;
+    text-align:center;
+}
+span.countbox{
+  line-height:100px;
+ background-color:rgb(59, 65, 70);
+ padding-top:10px;
+ padding-bottom:12px;
+ padding-left:15px;
+ padding-right:15px;
+ border-radius:50px;
+  height:100px; 
+  color:#FCF8F2;
+}
+.steps{
+  margin-left:10%;
+  margin-right:10%;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+span.step{
+  padding-top:30px;
+  padding-bottom:30px;
+  padding-left:38px;
+  padding-right:38px;
+  line-height: 100px;
+  border-radius:50px;
+  background-color:#6AB04C;
+  color:#FCF8F2;
+  
+}
+span {cursor:pointer; }
+		.minus, .plus{
+			width:30px;
+			height:30px;
+      line-height:30px;
+			background-color:#6AB04C;
+      color:#FCF8F2;
+			border-radius:15px;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+		}
+		input{
+			height:34px;
+      width: 70px;
+      text-align: center;
+      background-color:rgb(59, 65, 70);
+      padding-bottom:2px;
+      color:#FCF8F2;
+      line-height: 34px;
+		  border-radius:0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
 }
