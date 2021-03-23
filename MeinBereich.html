@@ -16,132 +16,121 @@
 </head>
 
 <body onload="name_abfrage(), bild_abfrage('eBild3'), bild_abfrage('eBild4')">
-	<!-- Header -->
+<!-- Header -->
 	<div>
-		<div class="header-blue">
+	<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-				<div class="container">
-					<a href="/index.html">
-            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+				<div class="container" id="container1">
+					<a href="/MeinBereich.html">
+          <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+              <a class="navbar-brand" href="/MeinBereich.html">
+                <b>myFridge</b>
+              </a>
+              </div>
+              
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+              </button> 
           </a>
-          <a class="navbar-brand" href="/index.html">
-            <b>myFridge</b>
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navcol-1"> 
+				
+        <div class="container" id="container2">
+          <div class="collapse navbar-collapse" id="navcol-1">
             <form class="form-inline mr-auto" target="_self">
-            </form>
-                
-            <ul class="nav navbar-nav">
-              <span class="navbar-text">
-                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
-              </span>
+              
+              </form>   
+                    <ul class="nav navbar-nav">
+                        <span class="navbar-text">
+                          <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+                        </span>
 
               <li class="dropdown">
                 <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
 
                 <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html" >Übersicht</a>
                   <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
                   <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
-                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
                 </div>
               </li>
             </ul>
 
+            
             <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
-              <div class="dropdown";>
+              <div class="dropdown"; style="margin-left:25px">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img id="eBild3" src="" style="height:50px;border-radius:25px;"> 
                 </a>
-            
-                    
                 <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
                   <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
                 </div>
               </div>
             </a>
-
+            
           </div>             
         </div>          
       </nav> 
     </div>
   </div>
-    <!-- Header Ende -->
+ <!-- Header Ende -->
 
-    <!-- Boxen -->
-   
-     <div class="options_box">
-        <div class="row align-items-center">
-            <div class="col-md-9">
-              <h1 style="padding-left:20%;right:30%;"> <span style="color:#FCF8F2"> Hallo </span> <span id="mein_bereich_name"></span>&nbsp;! </h1>
-            </div>
-            <div class="col-md-3" style="text-align:right;">
-              <img id="eBild4" src="" style="height:100px;margin-right:70px; border-radius:50px;">
-            </div>
-        </div>
-      <div class="row align-items-center boody">
+  <!-- Boxen -->
+  
+  <div class="options_box">
+    <div class="row">
         <div class="col">
-          <div class="profileboxes">
-          <div class="btn options " ><a class="btnlink" href="/MeineRezepte.html">Meine<br>Rezepte </a></div>
-          <div class="btn options">Gespeicherte<br>Rezepte</div>
-          <div class="btn options" style="line-height:120px;padding-top:0px;"><a class="btnlink" href="/Einstellungen.html">Einstellungen</div>
-          </div>
+          <img id="eBild4" src="" style="height:100px;margin-right:70px; border-radius:50px;float:right;">
+          <h1 style="padding-left:10%;"> <span style="color:#FCF8F2"> Hallo </span> <span id="mein_bereich_name"></span>&nbsp;<span style="color:#FCF8F2">!</span></h1>
         </div>
+    </div>
+  <div class="row boody">
+    <div class="col">
+      <div class="profileboxes">
+      <div class="btn options " ><a class="btnlink" href="/MeineRezepte.html">Meine<br>Rezepte </a></div>
+      <div class="btn options"><a class="btnlink" href="/Einkaufsliste.html">Meine<br>Einkaufsliste</a></div>
       </div>
-      <div class="row boody align-items-center">
-        <div class="col">
-          <div class="profileboxes">
-          <div class="btn options" >Gespeicherte<br> Beiträge</div>
-          <div class="btn options">Meine<br>Beiträge</div>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="row boody">
+    <div class="col">
+      <div class="profileboxes">
+      <div class="btn options" style="line-height:120px;padding-top:0px;"><a class="btnlink" href="/Einstellungen.html">Einstellungen</a></div>
+      <div class="btn options"><a class="btnlink" href="/RezeptErstellen.html">Rezept<br>Erstellen</a></div>
       </div>
-    </div> 
+    </div>
+  </div>
+</div> 
 
-    <!-- Boxen Ende -->
+<!-- Boxen Ende -->
 
 
-<!-- FOOTER -->
+<!-- Footer -->
   <hr class = "footerline"> 
     <div class="footer">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>H o m e</h3>
+                        <h3>Home</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Impressum</a></li>
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Einstellungen.html">Einstellungen</a></li>
                         </ul>
                     </div>
-                    
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>M y  F r i d g e </h3>
+                        <h3>myFridge</h3>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Rezepte</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="/Rezepte_uebersicht.html">Rezepte</a></li>
+                            <li><a href="/Einkaufsliste.html">Einkaufsliste</a></li>
                         </ul>
                     </div>
-                    
                     <div class="col-md-6 item text">
-                        <h3>D O W N L O A D</h3>
-                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
-                        <a href="#"><!--<img class = "app" src="https://www.thecathwalk.de/wp-content/uploads/sites/2/2017/07/app-store.svg" height="45"></a>-->
-                        <img class = "app" src="/Bilder/applestore.png" height="45"></a>
-                        <a href="#">
-                          <img class = "app" src="/Bilder/googleplay.png" height="45"></a>
-                        <a href="#">
-                        <!--<img class = "app" src="https://www.thecathwalk.de/wp-content/uploads/sites/2/2017/07/google-play-de-de.svg" height="45"></a>-->
+                        <h3>Download</h3>
+                        <p>Bleib immer aktuell und nutze alle Features in der App:</p>
+                       <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
+                        <a href="#"><img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
                     </div>
-
                     <div class="col item social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -153,6 +142,7 @@
             </div>
         </footer>
     </div>
+<!-- Footer Ende -->
 
     <!-- Login Einblendung -->
   
