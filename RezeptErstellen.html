@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,58 +15,59 @@
   <script type="text/javascript" src="/js/rezeptErstellen.js"></script>
 </head>
 
-<body onload="bild_abfrage('eBild6')">
-	<!-- Header -->
+<body onload="bild_abfrage('eBild6'), setCounter()">
+<!-- Header -->
 	<div>
-		<div class="header-blue">
+	<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-				<div class="container">
-					<a href="/index.html">
-            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+				<div class="container" id="container1">
+					<a href="/MeinBereich.html">
+          <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+              <a class="navbar-brand" href="/MeinBereich.html">
+                <b>myFridge</b>
+              </a>
+              </div>
+              
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+              </button> 
           </a>
-          <a class="navbar-brand" href="/index.html">
-            <b>myFridge</b>
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navcol-1"> 
+				
+        <div class="container" id="container2">
+          <div class="collapse navbar-collapse" id="navcol-1">
             <form class="form-inline mr-auto" target="_self">
-            </form>
-                
-            <ul class="nav navbar-nav">
-              <span class="navbar-text">
-                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
-              </span>
+              
+              </form>   
+                    <ul class="nav navbar-nav">
+                        <span class="navbar-text">
+                          <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+                        </span>
 
               <li class="dropdown">
                 <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
 
                 <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html" >Übersicht</a>
                   <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
                   <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
-                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
                 </div>
               </li>
             </ul>
 
+            
             <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
-              <div class="dropdown";>
+              <div class="dropdown"; style="margin-left:25px">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img id="eBild6" src="" style="height:50px;border-radius:25px;"> 
                 </a>
-            
-                    
                 <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
                   <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
                 </div>
               </div>
             </a>
-
+            
           </div>             
         </div>          
       </nav> 
@@ -75,71 +75,68 @@
   </div>
  <!-- Header Ende -->
 
-    <!-- To Top Button -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-caret-up"></i></button>
-    <!-- End Button to top -->
+<!-- To Top Button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-caret-up"></i></button>
+<!-- End Button to top -->
 
-    <!-- Homepage -->
+<!-- Rezept erstellen -->
 <img src="/Bilder/Rezepte/rezepte_erstellen.png" class="rezept" alt="Intro zur Rezepteerstellung">
 <section class="content">
  
 <!-- Rezeptinformationen-->
-<div class="options_box">
-<div class="formular" id=formular >
- <div style="text-align:center;">
-  <h2>Allgemeine Informationen</h2> 
+<div class="box_style">
+  <h2 style="text-align:center;">Allgemeine Informationen</h2> 
   <hr class="textbox"> <br>
     
- <div style="text-align:left;">  
+ <div class="einkaufsliste" style="text-align:left;">  
   <form name="Recipe" onSubmit="return chkFormular()">  
     <label for="titel" style="color:#6AB04C;"><h3>Titel deines Rezeptes</h3></label> 
-    <input type="text" id="titel" name="Titel" placeholder="Verleihe deinem Rezept einen einzigartigen Namen!" required> <br>
-    
+    <input type="text" id="titel" name="Titel" placeholder="Verleihe deinem Rezept einen einzigartigen Namen!" required> 
+    <br> <br>
     <label for="Beschreibung" style="color:#6AB04C; margin-top:10px;"><h3>Beschreibung</h3></label>
-    <textarea id="beschreibung" name="Beschreibung" placeholder="Füge hier deine Beschreibung hinzu, damit unsere Community weiß, was sie bei deinem Rezept erwarten kann!" style="height:200px;" required></textarea> <br>
-    
+    <textarea id="beschreibung" name="Beschreibung" placeholder="Füge hier deine Beschreibung hinzu, damit unsere Community weiß, was sie bei deinem Rezept erwarten kann!" style="height:200px;" required></textarea> 
+  
+    <br> <br>
      <label for="ernaehrungstyp" style="color:#6AB04C;"><h3>Ernährungstyp</h3></label>
      <div class="form-group">
-      <select name="Ernaehrungstyp" class="form-control" required>
-        <option class="hidden"  selected disabled value="">Wählen</option>
-          <option value="Vegetarier">Vegetarier</option>
-          <option value="Veganer">Veganer</option>
-          <option value="Sonstiges">Sonstiges</option>
-          <option value="Nichts">Keine Präferenzen</option>
-          </select>
+      <select name="Ernaehrungstyp"  id="ernaehrungstyp" class="form-control" required>
+        <option class="hidden" selected disabled value="">Wählen</option>
+        <option value="Vegetarier">Vegetarier</option>
+        <option value="Veganer">Veganer</option>
+        <option value="Sonstiges">Sonstiges</option>
+        <option value="Nichts">Keine Präferenzen</option>
+      </select>
      </div> <br>
 
     <label for="zeit"style="color:#6AB04C;"><h3>Zeit</h3></label>
     <div class="form-group">
-      <select name="Zeit" class="form-control" required>
+      <select name="Zeit" id="zeit" class="form-control" required>
         <option class="hidden" selected disabled value="">Wählen</option>
-          <option value="15"> < 15 min</option>
-          <option value="30"> < 30 min</option>
-          <option value="60"> < 60 min</option>
-          <option value="120"> < 120 min</option>
-          </select>
+        <option value="15"> < 15 min</option>
+        <option value="30"> < 30 min</option>
+        <option value="60"> < 60 min</option>
+        <option value="120"> < 120 min</option>
+      </select>
      </div> <br>
 
     <label for="schwierigkeit"style="color:#6AB04C;"><h3>Schwierigkeit</h3></label>
      <div class="form-group">
-      <select name="Schwierigkeit" class="form-control" required>
+      <select name="Schwierigkeit" id="schwierigkeit" class="form-control" required>
         <option class="hidden"  selected disabled value="">Wählen</option>
-          <option value="leicht"> leicht</option>
-          <option value="mittel"> mittel</option>
-          <option value="schwer"> schwer</option>
-          </select>
-          </div> 
+        <option value="leicht"> leicht</option>
+        <option value="mittel"> mittel</option>
+        <option value="schwer"> schwer</option>
+      </select>
+    </div> 
  </div>
- </div>
-</div>
 </div>
 <!-- Ende Rezept Informationen-->
 
 <!-- Zutatenliste-->
-<div class="options_box">
-  <div style="text-align:center;">
-  <h2>Zutaten (pro Person)</h2> 
+<div class="box_style">
+  <h2 style="text-align:center;">Zutaten (pro Person)</h2> 
   <hr class="textbox"> <br>
+  <div class="einkaufsliste">
     <table id="myTable" class="table order-list" style="text-align: center;">
     <thead>
         <tr>
@@ -151,13 +148,13 @@
     <tbody>
         <tr>
             <td class="col-sm-1">
-                <input type="number" name="Menge" min="1" max="10" step="0.5" class="form-control" placeholder="z.B. 2" required/>
+                <input value="" type="number" name="Menge" id="menge-0" min="1" max="10" step="0.5" class="form-control" placeholder="z.B. 2" required/>
             </td>
             <td class="col-sm-2">
-                <input type="text" name="Einheit" class="form-control" value="Stück" disabled/>
+                <input type="text" name="Einheit" id="einheit" class="form-control" value="Stück" disabled/>
             </td>
             <td class="col-sm-3">
-                <input type="text" name="Zutat"  class="form-control" placeholder="Tomaten" required />
+                <input value="" type="text" name="Zutat" id="zutat-0" class="form-control" placeholder="Tomaten" required />
             </td>
             <td class="col-sm-6"><a class="deleteRow"></a>
 
@@ -179,10 +176,10 @@
 <!-- Ende Zutatenliste-->
 
 <!-- Rezeptschritte -->
-<div class="options_box">
-  <div style="text-align:center;">
-  <h2>Rezeptschritte</h2> 
+<div class="box_style">
+  <h2 style="text-align:center;">Rezeptschritte</h2> 
   <hr class="textbox"> <br>
+  <div class="einkaufsliste">
    <table id="myTable2" class="table order-list2" style="text-align: center;">
     <thead>
         <tr>
@@ -192,11 +189,11 @@
     </thead>
     <tbody>
         <tr>
-            <td class="col-sm-4">
-                <input type="number" name="Schritt" min="1" max="15" step="0.5" class="form-control" placeholder="z.B. 1, 2, 3,..." required/>
+            <td class="col-sm-1">
+                <input type="number" name="Schritt" id="schritt-0" min="1" max="15" step="1" class="form-control" placeholder="z.B. 1, 2, 3,..." required/>
             </td>
-            <td class="col-sm-5">
-                <textarea name="Erklaerung" placeholder="z.B. Gemüse kleinschneiden"required></textarea>
+            <td class="col-sm-3">
+                <textarea name="Erklaerung" id="schritt-beschreibung-0" placeholder="z.B. Gemüse kleinschneiden"required></textarea>
             </td>
             <td class="col-sm-6"><a class="deleteRow"></a>
 
@@ -213,18 +210,15 @@
         </tr>
     </tfoot>
 </table>
-<input type="Submit" value="Jetzt erstellen!"> 
-  </div>
+</div>
+<div style="text-align:center;">
+<input type="Submit" value="Jetzt erstellen!" onclick="sendRezept()"> </div>
 </div>
   </form>
-<!-- Ende Rezeptschritte-->
 </section>
+<!-- Ende Rezeptschritte-->
 <!-- Rezept Ende -->
-<script>
-function myFunction() {
-  alert("Vielen Dank! Wir werden dein Rezept nun überprüfen und es dann hochladen. Wir sind gespannt auf dein Rezept!");
-}
-</script>
+
   
 <!-- Footer -->
   <hr class = "footerline"> 
@@ -232,30 +226,25 @@ function myFunction() {
         <footer>
             <div class="container">
                 <div class="row">
-                  
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Home</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="/Impressum.html">Impressum</a></li>
-                           
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Einstellungen.html">Einstellungen</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>myFridge</h3>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Rezepte</a></li>
-                            <li><a href="/FAQ.html">FAQ</a></li>
+                            <li><a href="/Rezepte_uebersicht.html">Rezepte</a></li>
+                            <li><a href="/Einkaufsliste.html">Einkaufsliste</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Download</h3>
                         <p>Bleib immer aktuell und nutze alle Features in der App:</p>
                        <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
-                        <a href="#">
-                        <img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
+                        <a href="#"><img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
                     </div>
                     <div class="col item social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -311,12 +300,12 @@ function myFunction() {
 <script src="/script.js"></script>
 <script src="/js/requests.js"></script>
 <script src="/js/handleForms.js"></script>
+<script src="/js/apiRezeptErstellen.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
    
-   
-   
+     
 <script>
   //Get the button:
   mybutton = document.getElementById("myBtn");
