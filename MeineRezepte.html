@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
+	<title>Meine Rezepte</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -17,61 +17,64 @@
 <body onload="bild_abfrage('eBild5')">
 	<!-- Header -->
 	<div>
-		<div class="header-blue">
+	<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-				<div class="container">
-					<a href="/index.html">
-            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+				<div class="container" id="container1">
+					<a href="/MeinBereich.html">
+          <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+              <a class="navbar-brand" href="/MeinBereich.html">
+                <b>myFridge</b>
+              </a>
+              </div>
+              
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+              </button> 
           </a>
-          <a class="navbar-brand" href="/index.html">
-            <b>myFridge</b>
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navcol-1"> 
+				
+        <div class="container" id="container2">
+          <div class="collapse navbar-collapse" id="navcol-1">
             <form class="form-inline mr-auto" target="_self">
-            </form>
-                
-            <ul class="nav navbar-nav">
-              <span class="navbar-text">
-                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
-              </span>
+              
+              </form>   
+                    <ul class="nav navbar-nav">
+                        <span class="navbar-text">
+                          <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+                        </span>
 
               <li class="dropdown">
                 <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
 
                 <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html" >Übersicht</a>
                   <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
                   <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
-                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
                 </div>
               </li>
             </ul>
 
+            
             <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
-              <div class="dropdown";>
+              <div class="dropdown"; style="margin-left:25px">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img id="eBild5" src="" style="height:50px;border-radius:25px;"> 
                 </a>
-            
-                    
                 <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
                   <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
                 </div>
               </div>
             </a>
-
+            
           </div>             
         </div>          
       </nav> 
     </div>
   </div>
-    <!-- Header Ende -->
+ <!-- Header Ende -->
+
+
 
     <!-- To Top Button -->
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-caret-up"></i></button>
@@ -95,12 +98,12 @@
     <div class="col d-flex justify-content-center">
 
       <div class="card mt-4 rezept">
-        <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png">
+        <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.jpg">
         <div class="card-body">
-          <h4 class="rezept">Salted Caramel Brownies</h4>
+          <h4 class="rezept">Brownies</h4>
           <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i>&nbsp;Leicht </h5>
-          <h5 class="rezept">Bei diesen Salted Caramel Brownies verschlägt es und glatt die Sprache. Sie sind so unfassbar lecker! Das liegt an... </h5>
-          <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
+          <h5 class="rezept">Bei diesen Brownies verschlägt es und glatt die Sprache. Sie sind so unfassbar lecker! Das liegt an... </h5>
+          <button class="btn btn-dark btn-lg action-button" type="button" style="border-color:green;font-size:12px;">Mehr</button>
         </div>
       </div>
     </div>
@@ -110,12 +113,12 @@
     <div class="col d-flex justify-content-center">
 
       <div class="card mt-4 rezept">
-        <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png" >
+        <img class="card-img-top rezept" src="Bilder/Rezepte/vegane_pfannkuchen.jpg" >
         <div class="card-body">
-          <h4 class="rezept">Brownies</h4>
+          <h4 class="rezept">Vegane Pfannkuchen</h4>
           <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i>&nbsp;Leicht </h5>
-          <h5 class="rezept">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-          <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
+          <h5 class="rezept">Lockere Pfannkuchen werden mit Bananen zu einer köstlichen süßen Mahlzeit, die den Gaumen verwöhnt. Mit diesem einfachen veganen Rezept gelingt das garantiert.</p>
+          <button class="btn btn-dark btn-lg action-button" type="button" style="border-color:green;font-size:12px;">Mehr</button>
         </div>
       </div>
     </div>
@@ -125,12 +128,12 @@
     <div class="col d-flex justify-content-center">
 
       <div class="card mt-4 rezept">
-        <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png" >
+        <img class="card-img-top rezept" src="Bilder/Rezepte/nacho_salat.jpg" >
         <div class="card-body">
-          <h4 class="rezept">Brownies</h4>
+          <h4 class="rezept">Nacho Schichtsalat</h4>
           <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i> &nbsp;Leicht </h5>
-          <h5 class="rezept">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</h5>
-          <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
+          <h5 class="rezept">Ein leckerer mexikanischer Schichtsalat für genießer.</h5>
+          <button class="btn btn-dark btn-lg action-button" type="button" style="border-color:green;font-size:12px;">Mehr</button>
         </div>
       </div>
     </div>
@@ -148,29 +151,25 @@
         <footer>
             <div class="container">
                 <div class="row">
-                  
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Home</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="/Impressum.html">Impressum</a></li>
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Einstellungen.html">Einstellungen</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>myFridge</h3>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Rezepte</a></li>
-                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Rezepte_uebersicht.html">Rezepte</a></li>
+                            <li><a href="/Einkaufsliste.html">Einkaufsliste</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Download</h3>
-                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
+                        <p>Bleib immer aktuell und nutze alle Features in der App:</p>
                        <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
-                        <a href="#">
-                        <img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
+                        <a href="#"><img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
                     </div>
                     <div class="col item social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
