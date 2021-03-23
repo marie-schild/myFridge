@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 #container{
   text-align: center;
 }
@@ -19,9 +23,9 @@ hr.textbox2{
   box-shadow: 0 2px 2px 0 #2B3135;
   background-color: #6AB04C;
 }
+
 .box_style {
   background-color:rgb(59, 65, 70);
-  color:#FCF8F2;
   /*margin-left:10%;
   margin-right:10%;*/
   margin-top:50px;
@@ -34,9 +38,9 @@ hr.textbox2{
   border-radius: 15px;
   height:auto;
 }
+
 .FAQ_style {
   background:#2b3135;
-  color:#FCF8F2;
   margin-left: 5%;
   margin-right: 5%;
   margin-top:50px;
@@ -49,6 +53,7 @@ hr.textbox2{
   border-radius: 15px;
   height:auto;
 }
+
 .content h3 {
   margin-top:0;
   margin-bottom:12px;
@@ -56,4 +61,92 @@ hr.textbox2{
   font-size:25px;
   color: #6AB04C;
   /*border-right: 2px solid #6AB04C;*/
+}
+.content h6 {
+  margin-top:0;
+  margin-bottom:12px;
+  /*font-weight:bold;*/
+  font-size:14px;
+  color: #6AB04C;
+  /*border-right: 2px solid #6AB04C;*/
+}
+
+
+input[type=submit] {
+  padding: 9px 25px;
+    background-color: #6AB04C;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    right: 0px;
+    color:#FCF8F2;
+} 
+input[type=text],select, textarea, placeholder {
+  width: 100%;
+  color: #FCF8F2;
+  background-color: #2B3135;
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #2B3135;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+.form-control1 {
+  width: 100%;
+  height: auto;
+  color: #FCF8F2;
+  background-color: #2B3135;
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid #2B3135;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  resize: vertical;
+}
+  input[type=Vorname]:focus {
+  background:#2B3135;
+  border-color: #FCF8F2;
+  color: #FCF8F2;
+  }
+
+  input[type=Nachname]:focus {
+  background:#2B3135;
+  border-color: #FCF8F2;
+  color: #FCF8F2;
+  }
+
+  input[type= E-Mail]:focus {
+  background:#2B3135;
+  border-color: #FCF8F2;
+  color: #FCF8F2;
+  }
+
+ input[type= Handynummer]:focus {
+  background:#2B3135;
+  border-color: #FCF8F2;
+  color: #FCF8F2;
+  }
+
+::placeholder {
+  color:#FCF8F2;
+  font-style: italic;
+}
+
+
+.FAQ_show_link{
+  text-align: center;
+  border-radius: 15px;
+  transition: ease-in-out 0.2s;
+}
+
+.FAQ_show_link:hover{
+  background-color: rgb(63, 71, 77);
 }
