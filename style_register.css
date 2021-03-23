@@ -77,3 +77,8 @@
 #pflichtfelder{
   color: #6AB04C;
 }
+
+input[type=text]::placeholder {
+  color:#FCF8F2;
+}
+
