@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Rezepte Übersicht</title>
+	<title>Übersicht Rezepte</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -15,172 +15,329 @@
   
 </head>
 
-<body onload="bild_abfrage('eBild7')">
+<body onload="bild_abfrage('eBild7'), rezept_abfrage()">
 <!-- Header -->
 	<div>
-		<div class="header-blue">
+	<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-				<div class="container">
-					<a href="/index.html">
-            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+				<div class="container" id="container1">
+					<a href="/MeinBereich.html">
+          <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+              <a class="navbar-brand" href="/MeinBereich.html">
+                <b>myFridge</b>
+              </a>
+              </div>
+              
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+              </button> 
           </a>
-          <a class="navbar-brand" href="/index.html">
-            <b>myFridge</b>
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navcol-1"> 
+				
+        <div class="container" id="container2">
+          <div class="collapse navbar-collapse" id="navcol-1">
             <form class="form-inline mr-auto" target="_self">
-            </form>
-                
-            <ul class="nav navbar-nav">
-              <span class="navbar-text">
-                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
-              </span>
+              
+              </form>   
+                    <ul class="nav navbar-nav">
+                        <span class="navbar-text">
+                          <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+                        </span>
 
               <li class="dropdown">
                 <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
 
                 <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html" >Übersicht</a>
                   <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
                   <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
-                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
                 </div>
               </li>
             </ul>
 
+            
             <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
-              <div class="dropdown";>
+              <div class="dropdown"; style="margin-left:25px">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img id="eBild7" src="" style="height:50px;border-radius:25px;"> 
                 </a>
-            
-                    
                 <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
                   <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
                 </div>
               </div>
             </a>
-
+            
           </div>             
         </div>          
       </nav> 
     </div>
   </div>
-    <!-- Header Ende -->
-    
+ <!-- Header Ende -->
+
   <div>
-    <img src="Bilder/Rezepte/main_rezept.png" class="rezept">
-
+    <img src="Bilder/Rezepte/rezepte_uebersicht.jpg" class="rezept-header">
   </div>  
-    
-
-    <!-- Rezepte Übersicht -->
-  <div class="box_style">
+  
+  <!-- Rezepte Übersicht -->
+  <div class="container">
+    <!--
     <div class="row">
       <div class="col">
         <h1 style="text-align: center;">Alle Rezepte</h1>
-        <hr class="textbox" style="margin-left: 10%; margin-right: 10%;">
-        <br>
       </div>
+    </div>  -->
+    
+    <div class="row">
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option selected>Ernährungstyp</option>
+          <option>Vegetarisch</option>
+          <option>Vegan</option>
+          <option>Keine Präferenzen</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option selected>Zeit</option>
+          <option> < 15 min</option>
+          <option> < 30 min</option>
+          <option> < 60 min</option>
+          <option> < 120 min</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option selected>Schwierigkeit</option>
+          <option>Einfach</option>
+          <option>Mittel</option>
+          <option>Schwer</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-3">
+        <select class="form-control">
+          <option selected>Bewertung</option>
+          <option>&bigstar;&bigstar;&bigstar;&bigstar;&bigstar;</option>
+          <option>&bigstar;&bigstar;&bigstar;&bigstar;&star;</option>
+          <option>&bigstar;&bigstar;&bigstar;&star;&star;</option>
+          <option>&bigstar;&bigstar;&star;&star;&star;</option>
+          <option>&bigstar;&star;&star;&star;&star;</option>
+        </select>
+      </div>
+
+      <div class="form-group input-group col-xl-12">
+          <input class="form-control" type="search" placeholder="Suchen..." />
+          <div class="input-group-append">
+            <button type="button" class="btn-srch">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+      </div>
+    </div>
+
+
+
+    <div class="row no-gutters">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="/Bilder/Rezepte/brownies.png" id="rezept-bild" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title" id="rezept-title">Salted Caramel Brownies</h3>
+            <h5 class="card-subtitle" id="rezept-subtitle">
+              <i class="far fa-clock"></i>&VeryThinSpace; <span id="rezept-zubereitungszeit">45 min</span> 
+              &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+              <i class="fas fa-birthday-cake"></i>&ThinSpace; <span id="rezept-schwierigkeit">leicht</span>
+            </h5>
+            <hr>
+            <h5 class="card-text" style="height: 100px; overflow: hidden; text-overflow: ellipsis;" id="rezept-text">Unglaublich leckeres Rezept mit unvergleichlichem Schokoladen Geschmack.</h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="" id="rezept-bild-0" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title" id="rezept-title-0"></h3>
+            <h5 class="card-subtitle" id="rezept-subtitle-0">
+              <i class="far fa-clock"></i>&VeryThinSpace;<span id="rezept-zubereitungszeit-0"></span>
+              &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+              <i class="fas fa-birthday-cake"></i>&ThinSpace;<span id="rezept-schwierigkeit-0"></span>
+            </h5>
+            <hr>
+            <h5 class="card-text" id="rezept-text-0"></h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="" id="rezept-bild-1" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title" id="rezept-title-1"></h3>
+            <h5 class="card-subtitle" id="rezept-subtitle-1">
+              <i class="far fa-clock"></i>&VeryThinSpace;<span id="rezept-zubereitungszeit-1"></span>
+              &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+              <i class="fas fa-birthday-cake"></i>&ThinSpace;<span id="rezept-schwierigkeit-1"></span>
+            </h5>
+            <hr>
+            <h5 class="card-text" id="rezept-text-1"></h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="" id="rezept-bild-2" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title" id="rezept-title-2"></h3>
+            <h5 class="card-subtitle" id="rezept-subtitle-2">
+              <i class="far fa-clock"></i>&VeryThinSpace;<span id="rezept-zubereitungszeit-2"></span>
+              &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+              <i class="fas fa-birthday-cake"></i>&ThinSpace;<span id="rezept-schwierigkeit-2"></span>
+            </h5>
+            <hr>
+            <h5 class="card-text" id="rezept-text-2"></h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <!-- BACKUP    
+    <div class="row no-gutters">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="Bilder/Rezepte/nacho_salat.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Nacho Salat Mexikanische Art</h3>
+            <h5 class="card-subtitle"><i class="far fa-clock"></i> 15 min. &MediumSpace; <i class="fas fa-birthday-cake"></i> Leicht</h5>
+            <hr>
+            <h5 class="card-text">Für das tolle Sommer-Gefühl zu jeder Zeit. Es ist einfach zuzubereiten und benötigt nur wenige Zutaten...</h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="Bilder/Rezepte/vegane_pfannkuchen.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Vegane Pfannkuchen</h3>
+            <h5 class="card-subtitle"><i class="far fa-clock"></i> 25 min. &MediumSpace; <i class="fas fa-birthday-cake"></i> Leicht</h5>
+            <hr>
+            <h5 class="card-text">Nicht nur für Veganer ein Hit. Dieses Rezept überzeugt die ganze Familie und bringt eine Abwechslung in die Küche...</h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="Bilder/Rezepte/glasierter_spitzkohl.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Glasierter Spitzkohl mit Miso</h3>
+            <h5 class="card-subtitle"><i class="far fa-clock"></i> 50 min. &MediumSpace; <i class="fas fa-birthday-cake"></i> Schwer</h5>
+            <hr>
+            <h5 class="card-text">Ein einfaches Rezept für unter der Woche, das immer funktioniert. Du kannst den Spitzkohl auch mit vielen weitern Zutaten kombinineren...</h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="card h-100">
+          <img src="Bilder/Rezepte/brownies.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h3 class="card-title">Salted Caramel Brownies</h3>
+            <h5 class="card-subtitle"><i class="far fa-clock"></i> 35 min. &MediumSpace; <i class="fas fa-birthday-cake"></i> Mittel</h5>
+            <hr>
+            <h5 class="card-text">Bei diesen Salted Caramel Brownies verschlägt es uns glatt die Sprache. Sie sind so unfassbar lecker! Das liegt...</h5>
+          </div>
+          <div class="card-footer">
+            <a href="Rezept.html"><button class="btn">Mehr</button></a>
+          </div>
+        </div>
+      </div>
+      -->
     </div>
       
-    <div class="row" style="margin-left:10%;margin-right:10%;">
-
-
-
-      <div class="col d-flex justify-content-center">
-                
-        <div class="card mt-4 rezept">
-          <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png">
-          <div class="card-body">
-            <h4 class="rezept">Salted Caramel Brownies</h4>
-            <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i>&nbsp;Leicht </h5>
-            <h5 class="rezept">Bei diesen Salted Caramel Brownies verschlägt es und glatt die Sprache. Sie sind so unfassbar lecker! Das liegt an... </h5>
-            <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
-          </div>
-        </div>
-
+    <div class="row">
+      <div class="col">
+        <nav aria-label="Page navigation">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Zurück</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Weiter</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-              
-
-
-      <div class="col d-flex justify-content-center">
-
-        <div class="card mt-4 rezept">
-          <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png" >
-          <div class="card-body">
-            <h4 class="rezept">Brownies</h4>
-            <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i>&nbsp;Leicht </h5>
-            <h5 class="rezept">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</p>
-            <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col d-flex justify-content-center">
-
-        <div class="card mt-4 rezept">
-          <img class="card-img-top rezept" src="Bilder/Rezepte/brownies.png" >
-          <div class="card-body">
-            <h4 class="rezept">Brownies</h4>
-            <h5 class="rezept" style="font-weight:bold;"><i class="far fa-clock"></i>&nbsp;35 Min &nbsp;<i class="fas fa-bread-slice"></i> &nbsp;Leicht </h5>
-            <h5 class="rezept">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</h5>
-            <a href="#" class="btn btn-primary"><h5 class="rezeptbtn">Mehr</h5></a>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </div>
+  
+
   
    
 
 <!-- Rezepte Übersicht -->
     
-    <!-- FOOTER -->
+<!-- Footer -->
   <hr class = "footerline"> 
     <div class="footer">
         <footer>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>H o m e</h3>
+                        <h3>Home</h3>
                         <ul>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                            <li><a href="#">Impressum</a></li>
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Einstellungen.html">Einstellungen</a></li>
                         </ul>
                     </div>
-                    
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>M y  F r i d g e </h3>
+                        <h3>myFridge</h3>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Rezepte</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="/Rezepte_uebersicht.html">Rezepte</a></li>
+                            <li><a href="/Einkaufsliste.html">Einkaufsliste</a></li>
                         </ul>
                     </div>
-                    
                     <div class="col-md-6 item text">
-                        <h3>D O W N L O A D</h3>
-                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
-                        <a href="#"><!--<img class = "app" src="https://www.thecathwalk.de/wp-content/uploads/sites/2/2017/07/app-store.svg" height="45"></a>-->
-                        <img class = "app" src="/Bilder/applestore.png" height="45"></a>
-                        <a href="#">
-                          <img class = "app" src="/Bilder/googleplay.png" height="45"></a>
-                        <a href="#">
-                        <!--<img class = "app" src="https://www.thecathwalk.de/wp-content/uploads/sites/2/2017/07/google-play-de-de.svg" height="45"></a>-->
+                        <h3>Download</h3>
+                        <p>Bleib immer aktuell und nutze alle Features in der App:</p>
+                       <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
+                        <a href="#"><img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
                     </div>
-
                     <div class="col item social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -192,40 +349,8 @@
             </div>
         </footer>
     </div>
+<!-- Footer Ende -->
 
-    <!-- Login Einblendung -->
-  
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header border-bottom-0">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-            <div class="form-title text-center">
-                <h4>Login</h4>
-            </div>
-            <div class="d-flex flex-column text-center">
-                <form>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="email1"placeholder="Deine Email-Adresse...">
-                </div>
-                <div class="form-group">
-                    <input type="password" class="form-control" id="password1" placeholder="Dein Passwort...">
-                </div>
-                <button type="button" class="btn btn-info btn-block btn-round">Login</button>
-                </form>
-            </div>
-            </div>
-                <div class="modal-footer d-flex justify-content-center">
-                    <div class="signup-section">Noch kein Mitglied? <a href="#a">Jetzt Registrieren</a>.</div>
-                </div>
-        </div>
-    </div>
-    
-    <!-- Footer Ende -->
     <script src="/script.js"></script>
     <script src="/js/requests.js"></script>
     <script src="/js/handleForms.js"></script>
