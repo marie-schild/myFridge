@@ -45,20 +45,28 @@
 }
 
 /* for ratings carousel*/
-
-
-.carousel{
-  margin-top: 50px;
-  margin:0px;
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+  display: block;
+}
+.carousel-inner {
+  min-height: 300px;
+  border-radius: 15px;
+  background-color: rgb(59, 65, 70);
+}
+.comment{
+  background-color:#FCF8F2;
+  padding:20px;
+  margin:20px;
+  color:#2B3135;
+  border-radius:15px;
+  min-height:250px;
+  hyphens: auto; 
+  word-break: break-word;
+  text-align: center;
 }
 
-.carousel-inner{
-  
-  height: 800px;
- 
-  /*padding-left: 15%;
-  padding-right:15%;*/
-}
+
+
 .carousel-caption{
   color: #FCF8F2;
   top: 100%;
