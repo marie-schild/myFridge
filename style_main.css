@@ -62,10 +62,7 @@ a:visited {
   text-decoration: none;
 }
 
-.dropdown-menu.settings{
-  background-color:#2B3135;
-  color:#FCF8F2;
-}
+
 .dropdown-item:hover{
   background-color:rgb(59, 65, 70);
   color: #6AB04C;
@@ -100,6 +97,7 @@ a.logbtn:hover{
   text-decoration:none;
   color:#2b3135;
 }
+
 /* Header-Bereich*/
 .header-blue {
   /*background:linear-gradient(135deg, #172a74, #21a9af);*/
@@ -109,17 +107,7 @@ a.logbtn:hover{
   box-shadow: 
         inset 0px 12px 15px -10px rgb(97, 138, 78),
         inset 0px -12px 15px -10px rgb(97, 138, 78);
-  
 }
-
-
-/*
-hr.header {
-    border: 0;
-    width: 90%;
-    height: 0.1px;
-    background-color: #FCF8F2;  
-}*/
 
 @media (min-width:768px) {
   .header-blue {
@@ -138,9 +126,16 @@ hr.header {
   
 }
 
-.header-blue .container {
-  margin-left: 10%;
-  margin-right: 10%;
+
+
+#container1 {
+  margin-left:10%;
+  width:10%;
+}
+
+#container2 {
+  margin-left:0%;
+  margin-right:10%;
 }
 
 @media (min-width:768px) {
@@ -156,6 +151,9 @@ hr.header {
   color:inherit;
   text-decoration: none;  
   transition: 0.4s;
+  text-align: left;
+  margin-left:0;
+  padding-left:0;
 }
 
 .header-blue .navbar .navbar-brand:hover {
@@ -203,6 +201,7 @@ hr.header {
 .header-blue .navbar .navbar-toggler:hover, .header-blue .navbar-toggler:focus {
   color:#6AB04C;
   background:none;
+ 
 }
 
 .header-blue .navbar .navbar-nav a.active, .header-blue .navbar .navbar-nav > .show .dropdown-item {
@@ -483,6 +482,9 @@ hr.footerline {
     margin: -2rem 0rem 2rem;
   }
 
+ .close {
+   color:#FCF8F2;
+ }
  
   .signup-section {
     color: #FCF8F2;
@@ -527,5 +529,22 @@ hr.footerline {
     color: #FCF8F2;
     font-size: 18px;
   }
-  
+
+input[type=email]::placeholder {
+  color:#FCF8F2;
+}
+
+input[type=password]::placeholder {
+  color:#FCF8F2;
+}
+
+.dropdown-menu.settings{
+  background-color:#2B3135;
+  color:#FCF8F2;
+  border-radius:15px;
+}
+.dropdown-item:hover{
+  background-color:rgb(59, 65, 70);
+  color: #6AB04C;
+}
   /* Ende Login-Bereich */
