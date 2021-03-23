@@ -1,20 +1,89 @@
-.rezept {
+/*  Grün    #6AB04C 
+    Weiß    #FCF8F2
+    Schrift #2B3135
+*/
+
+.rezept-header {
   width: 100%;
-  height: 500px;
-  object-fit: cover;
-  object-position: 0 100%;
 }
 
-.box_style {
-  background-color:rgb(59, 65, 70);
-  color:#FCF8F2;
-  margin-top:50px;
-  margin-right:10%;
-  margin-left:10%;
-  padding-top:50px;
-  padding-bottom:50px;
-  font-family:'Roboto Slab', serif;
-  overflow: hidden;
+.row{
+  margin: 5% 0 0 0;
+}
+
+@media (max-width: 992px) {
+  
+  .col-md-6{
+    padding: 1% 0;
+  } 
+}
+
+.col-md-3{
+  padding: 0 5px;
+}
+
+.input-group{
+  padding: 0 5px;
+}
+
+input[type=search]{
+  cursor: text;
+  border-right: none;
+}
+
+.btn-srch{
+  padding: 3px 15px;
+  background-color: #6AB04C;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px white solid;
+}
+
+.btn-srch:focus{
+  outline: none;
+}
+
+.btn-srch:hover{
+  background-color: rgb(90, 150, 64);
+  cursor: pointer;
+}
+
+.card{
+  margin: 0 5px;
+  border: none;
   border-radius: 15px;
-  height:auto;
+}
+
+.card-img-top{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-title{
+  color: #6AB04C;
+}
+
+.card-subtitle{
+  color: #2B3135;
+}
+
+.card-text{
+  color: #2B3135;
+}
+
+.card-footer{
+  text-align: center;
+}
+
+button.btn{
+  margin: 0;
+}
+
+.page-item:hover, .page-link:hover{
+  color: #6AB04C;
+}
+
+input[type=search]::placeholder {
+  color:#FCF8F2;
+  font-style: italic;
 }
