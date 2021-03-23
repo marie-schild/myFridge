@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mein Bereich</title>
+	<title>Brownie Rezept</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
@@ -22,57 +22,58 @@
 </head>
 
 <body onload="bild_abfrage('eBild8')">
-	<!-- Header -->
+<!-- Header -->
 	<div>
-		<div class="header-blue">
+	<div class="header-blue">
 			<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-				<div class="container">
-					<a href="/index.html">
-            <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+				<div class="container" id="container1">
+					<a href="/MeinBereich.html">
+          <img src="/Bilder/fridge.png" alt="Beispiel Logo" style ="height: 45px; margin-right:15px;">
+              <a class="navbar-brand" href="/MeinBereich.html">
+                <b>myFridge</b>
+              </a>
+              </div>
+              
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+              </button> 
           </a>
-          <a class="navbar-brand" href="/index.html">
-            <b>myFridge</b>
-          </a>
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-          <div class="collapse navbar-collapse" id="navcol-1"> 
+				
+        <div class="container" id="container2">
+          <div class="collapse navbar-collapse" id="navcol-1">
             <form class="form-inline mr-auto" target="_self">
-            </form>
-                
-            <ul class="nav navbar-nav">
-              <span class="navbar-text">
-                <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
-              </span>
+              
+              </form>   
+                    <ul class="nav navbar-nav">
+                        <span class="navbar-text">
+                          <a href="/Einkaufsliste.html" class="login" >Einkaufsliste</a>
+                        </span>
 
               <li class="dropdown">
                 <a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="margin-left:25px; margin-right: 0px; color: #FCF8F2;outline:none;" >Rezepte</a>
 
                 <div class="dropdown-menu" role="menu">
-                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html">Übersicht</a>
+                  <a class="dropdown-item" role="presentation" href="/Rezepte_uebersicht.html" >Übersicht</a>
                   <a class="dropdown-item" role="presentation" href="/MeineRezepte.html">Meine Rezepte</a>
                   <a class="dropdown-item" role="presentation" href="/RezeptErstellen.html">Rezept erstellen</a>
-                  <a class="dropdown-item" role="presentation" href="/Rezept.html">Brownie Rezept</a>
                 </div>
               </li>
             </ul>
 
+            
             <a style="text-decoration:none;"> &nbsp; &nbsp;&nbsp;&nbsp;
-              <div class="dropdown";>
+              <div class="dropdown"; style="margin-left:25px">
                 <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <img id="eBild8" src="" style="height:50px;border-radius:25px;"> 
                 </a>
-            
-                    
                 <div class="dropdown-menu settings" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item settings" href="/MeinBereich.html">Mein Bereich</a>
                   <button class="dropdown-item settings" href="#" onclick="logoutUser()">Logout</button>
                 </div>
               </div>
             </a>
-
+            
           </div>             
         </div>          
       </nav> 
@@ -81,10 +82,13 @@
  <!-- Header Ende -->
 
 
+
+
     <!-- Rezept Seite -->
+<div style="margin-left:10%;margin-right:10%">
 <div class="row">
   <div class="col">
-    <div class="container justify-content-center" style="margin-left:10%;margin-right:10%;text-align:center">
+    <div class=" justify-content-center" style="text-align:center">
       <img src="/Bilder/Rezepte/brownies.png" style="width:100%">
       <h1 class="rezeptue">Salted Caramel Brownies</h1>
       <br>
@@ -97,18 +101,20 @@
 </div>
 <div class="row">
   <div class="col">
-    <div class="container" style="margin-left:10%;margin-right:10%;">
+    
       <p>Bei diesen Salted Caramel Brownies verschlägt es uns glatt die Sprache. Sie sind so unfassbar lecker! Das liegt natürlich vorallem an unserer unwiederstehlichen Protein Cream Salted Caramel. Wenn wir sie nicht gerade direkt vom Löffel naschen, kommt sie am liebsten auf gesunde, frisch gebackene Brownies. Wer kann dieser Kombination noch wiederstehen?
       </p>
-    </div>
+   
   </div>
 </div>
 
 
-<div class="container" style="margin-left:10%; margin-right:10%;padding-top:50px;">
-  <div class="row">
-    <div class="col-md-6">
-      <h2 style="color:#6AB04C;">Zutaten</h2>
+ 
+<!-- Zutatenliste -->
+<div class="row">
+<div class="col-md-6">
+<div style="float:left;margin-right:53%;">
+  <h2 style="color:#6AB04C;">Zutaten</h2>
       <p> für <span class="countbox">
         <span class="number">
 	        <span class="minus" onclick="remove()" >-</span>
@@ -117,17 +123,7 @@
 	        <span class="plus" onclick="add()">+</span>
         </span>
       </span>
-    </div>
-    <div class="col-md-6">
-      <h2 style="color:#6AB04C;text-align:right;">Nährwerte</h2>
-      <p style="text-align:right;">pro Portion</p>
-    </div>
-  </div>
-</div>
-<!-- Zutatenliste -->
-<div class="row">
-<div class="col-md-6">
-<div style="float:left;margin-left:10%;">
+      <br><br>
 <div class="zutaten">
     <table>
     <tr>
@@ -194,7 +190,10 @@
 <!-- Ende Zutatenliste-->
 <!-- Nährwerte -->
 <div class="col-md-6">
-<div style="float:right;margin-right:10%;margin-left:10%;">
+<div style="float:right;margin-left:53%;">
+  <h2 style="color:#6AB04C;text-align:right;">Nährwerte</h2>
+      <p style="text-align:right;">pro Portion</p>
+      <br><br>
 <div class="zutaten">
     <table>
     <tr>
@@ -219,7 +218,7 @@
 
 </div>
 <!-- Ende Nährwerte -->
-<div style="float:right;margin-right:10%;margin-left:10%;">
+<div style="float:right;right:10%;">
 <div class="zutaten">
     <table>
     <tr>
@@ -242,8 +241,8 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-    <h2 style="margin-left:10%;color:#6AB04C;margin-top:50px;margin-bottom:50px;">Zubereitung</h2>
+  <div class="col">
+    <h2 style="color:#6AB04C;margin-top:50px;margin-bottom:50px;">Zubereitung</h2>
   </div>
 </div>
 <!-- Rezeptschritte -->
@@ -301,11 +300,11 @@
 <div class="row">
   <div class="col">
   
-    <h2 style="margin-left:10%;color:#6AB04C;margin-top:50px;margin-bottom:50px;">Kommentare
+    <h2 style="color:#6AB04C;margin-top:50px;margin-bottom:50px;">Kommentare
   </h2> 
   </div>
 </div> 
-<div class="row" style="margin-left:13%;margin-bottom:50px;">
+<div class="row" style="margin-left:3%;margin-bottom:50px;">
   <div class="col-md-1">
   </div>
   <div class="col-md-11">
@@ -323,7 +322,7 @@
   </div>
   </div>
 </div>
-<div class="row" style="margin-left:10%;margin-bottom:50px">
+<div class="row" style="margin-bottom:50px">
   <div class="col-md-1">
       <img src="Bilder/avatare/Standard.png" style="height:80px;border-radius:40px;"> </a>
   </div>
@@ -332,46 +331,37 @@
       
   </div>
 </div>
-
+</div>
 
 <!-- Kommentare Ende -->
-
 <!-- Ende Rezept Seite -->
-<!-- FOOTER -->
+
+<!-- Footer -->
   <hr class = "footerline"> 
     <div class="footer">
-      <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-3 item">
-              <h3>H o m e</h3>
-              <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Kontakt</a></li>
-                <li><a href="#">Impressum</a></li>
-              </ul>
-            </div>
-                    
+        <footer>
+            <div class="container">
+                <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>M y  F r i d g e </h3>
+                        <h3>Home</h3>
                         <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Rezepte</a></li>
-                            <li><a href="#">FAQ</a></li>
+                            <li><a href="/MeinBereich.html">Mein Bereich</a></li>
+                            <li><a href="/Einstellungen.html">Einstellungen</a></li>
                         </ul>
                     </div>
-                    
-                    <div class="col-md-6 item text">
-                        <h3>D O W N L O A D</h3>
-                        <p>Bleiben Sie immer aktuell und nutzen alle Features in der App:</p>
-                        <a href="#">
-                        <img class = "app" src="/Bilder/applestore.png" height="45"></a>
-                        <a href="#">
-                          <img class = "app" src="/Bilder/googleplay.png" height="45"></a>
-                        <a href="#">
-                        
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>myFridge</h3>
+                        <ul>
+                            <li><a href="/Rezepte_uebersicht.html">Rezepte</a></li>
+                            <li><a href="/Einkaufsliste.html">Einkaufsliste</a></li>
+                        </ul>
                     </div>
-
+                    <div class="col-md-6 item text">
+                        <h3>Download</h3>
+                        <p>Bleib immer aktuell und nutze alle Features in der App:</p>
+                       <a href="#"><img class = "app" src="/Bilder/applestore.png" height="45"></a>
+                        <a href="#"><img class = "app" src=" /Bilder/googleplay.png" height="45"></a>
+                    </div>
                     <div class="col item social">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -383,6 +373,7 @@
             </div>
         </footer>
     </div>
+<!-- Footer Ende -->
 
     <!-- Login Einblendung -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
@@ -429,7 +420,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    
     <script>
+    // Funktion zum Runterzählen der Zutatenmenge beim Click auf minus
     $(document).ready(function() {
 			$('.minus').click(function () {
 				var $input = $(this).parent().find('input');
@@ -439,6 +432,8 @@
 				$input.change();
 				return false;
 			});
+
+      // Funktion zum Hochzählen der Zutatenmenge beim Click auf plus
 			$('.plus').click(function () {
 				var $input = $(this).parent().find('input');
 				$input.val(parseInt($input.val()) + 1);
@@ -448,44 +443,61 @@
 		});
     </script>
     
+    <!-- Folgendes implimentiert die Logik für das hochzählen der Zutaten im Bezug auf die Ursprünglich festgelegte Zutatenmenge vom Nutzer für eine Person -->
     <script>
-    
+    // Festlegung eines Arrays mit "formerValue" (Grundmenge)für die einzelnen Zutatenmengen
+    // Zunächst wird dabei für alle Zutaten 0 als Menge festgelegt
     var formerValue=[0,0,0,0,0,0,0,0,0,0,0];
-   
+   // Festlegung der Variable count, welche dazu dient zu erkennen, ob der FormerValue von 0 bereits überschrieben wurde mit einer Grundmenge
     var count=[false,false,false,false,false,false,false,false,false,false,false];
     
+    // Funktion, um die Grundmenge abzufragen
     function getFormerValue(i){
-
+      // Wenn die Grundmenge noch nicht gesetzt wurde (Personenanzahl also noch auf 1 steht): 
       if(count[i] === false){
+        // Grundmenge von Zutat i wird aus HTML Seite ausgelesen und abgespeichert
         formerValue[i] = parseInt(document.getElementById('z'+i).innerHTML);
+        // count wird auf true gesetzt --> es wird festgelegt, dass Grundmenge gesetzt wurde
         count[i]=true;
       }
+      // Grundmenege der Zutat i wird zurückgegeben
       return formerValue[i];
     }
+    // Funktion die die Grundmenge der Zutaten jeweils noch einmal zu der aktuellen Zutatenmenge dazu addiert,(wird aufgerufen, wenn eine Person für die Rezeptmenge hinzugefügt wurde)
       function add(){
+        // geht alle Zutaten i durch
         for(i=0;i<11;i++){
+          // Deklaration der Variable addnum, die die aktuelleZutatenmenge der Zutat i aus der HTML Datei liest und speichert
           let addnum = document.getElementById('z'+i).innerHTML;
+          // addnum wird in einen Integer umgewandelt
           addnum = parseInt(addnum);
+          // auf die aktuelle Zutatenmenge wird die Grundmenge addiert
           addnum +=getFormerValue(i);
+          // Die neue Zutatenmenge wird in die HTML Datei geschrieben
           document.getElementById('z'+i).innerHTML = addnum;
         }
         
       }
+      // Funktion die die Grundmenge der Zutaten jeweils einmal von der aktuellen Zutatenmenge abzieht, wenn die aktuelle Zuatatenmenge nicht der Grundmenge entspricht(wird aufgerufen, wenn eine Person für die Rezeptmenge entfernt wurde)
       function remove(){
+        // Wenn eine Grundmenge bereits festgelegt wurde:
         if(parseInt(document.getElementById('z0').innerHTML)!=formerValue[0]){
+          // Geht alle Zutaten i durch 
           for(i=0;i<11;i++){
+          // Deklariert eine Variable addnum, die die aktuelle Zutatenmenge aus dem Rezpt liest
           let addnum = document.getElementById('z'+i).innerHTML;
+          // Variable addnum wird in einen Integer umgewandelt
           addnum = parseInt(addnum);
+          // Wenn addnum nicht 0 ist:
           if(addnum > 0){
+            // von der aktuellen Menge die Grundmenge abziehen
             addnum -=getFormerValue(i);
           }
+          // Die neue aktuelle Menge ins Rezept schreiben
           document.getElementById('z'+i).innerHTML = addnum;
           }
         }
-        
-        
       }
-      
     </script>
 </body>
 
