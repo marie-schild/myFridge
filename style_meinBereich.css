@@ -1,5 +1,6 @@
 .box_style {
   background-color:rgb(59, 65, 70);
+ 
   color:#FCF8F2;
   margin-top:50px;
   margin-right:10%;
@@ -10,16 +11,23 @@
   overflow: hidden;
   border-radius: 15px;
   height:auto;
+  
+}
+.sbox{
+  width:120px; 
+  margin-left: -webkit-calc(50% - 60px);
+  margin-left:    -moz-calc(50% - 60px);
+  margin-left:         calc(50% - 60px);
 }
 .boody{
   padding-left:20%;
   padding-right:20%;
+  
 }
 .profileboxes{
-  padding-top:25px;
-  display: flex;
+ 
   align-items: center;
-  justify-content: center
+  text-align:center;
 }
 
 @media (min-width:768px) {
@@ -28,14 +36,6 @@
   }
 }
 
-.dropdown-menu.settings{
-  background-color:#2B3135;
-  color:#FCF8F2;
-}
-.dropdown-item:hover{
-  background-color:rgb(59, 65, 70);
-  color: #6AB04C;
-}
 i.usericon{
   position: absolute;
   font-size:400%;
@@ -101,6 +101,7 @@ h1{
   width:123px;
   height:123px;
   padding-top:40px;
+  margin-bottom:20px;
   margin-right:40px;
   
 }
@@ -154,7 +155,6 @@ a.options:hover{
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
-
 
 
 .container_navigation
@@ -313,6 +313,33 @@ a.options:hover{
     
 }
 
+
+@media only screen and (max-width: 1150px) {
+    .boxes {
+        flex-direction: column;
+    }
+    
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box .content p {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+     .boxes {
+        margin: 10px 0;  
+    }
+    
+    .box .content p {
+        margin: 10px 5px 40px 50px;
+    }
+}
 
 
 
