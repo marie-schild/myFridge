@@ -2,10 +2,11 @@
     Weiß    #FCF8F2
     Schrift #2B3135
 */
-
-.rezept-header {
+.rezept {
   width: 100%;
+  height: auto;
 }
+
 
 .row{
   margin: 5% 0 0 0;
