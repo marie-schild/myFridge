@@ -82,7 +82,7 @@ input[type=submit] {
     position: relative;
     right: 0px;
     color:#FCF8F2;
-} 
+}
 input[type=text],select, textarea, placeholder {
   width: 100%;
   color: #FCF8F2;
