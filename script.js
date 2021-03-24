@@ -34,12 +34,12 @@ function sendForm(){
       alert("Sie haben sich als "+ vorname.value + " " + nachname.value + " registriert. Sie können sich nun einloggen");
       
       // Weiterleitung auf Startseite
-      window.location = "https://kuhlschrankverwaltung.chrisfitzer.repl.co/index.html";
+      window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
     } else {
       alert("Die Email wurde bereits verwendet");
 
       // Neu laden der Registrierungs Seite
-      window.location = "https://kuhlschrankverwaltung.chrisfitzer.repl.co/registrierung.html";
+      window.location = "https://zealous-brown-3f1929.netlify.app/registrierung.html";
     }
   });
 }
@@ -96,7 +96,7 @@ function loginForm() {
         localStorage.setItem("global_token", json.token);
 
         // Weiterleitung zu MeinBereich Seite
-        window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/MeinBereich.html";
+        window.location = "https://zealous-brown-3f1929.netlify.app/MeinBereich.html";
       } else {
 
       // Wenn User/Email nicht in Datenbank gefunden oder Passwort falsch dann Fehlermeldung
@@ -205,7 +205,7 @@ function deleteUser() {
   .then(res =>{
     console.log(res);
     // Weiterleitung auf die Startseite
-    window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/index.html";
+    window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
   });
 }
 
@@ -237,7 +237,7 @@ function logoutUser(){
         localStorage.setItem('global_token', '');
 
         // Weiterleitung auf die Startseite
-        window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/index.html";
+        window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
     });
 }
 
@@ -282,7 +282,7 @@ function updateUser(){
     alert("Deine Daten wurden erfolgreich geändert");
 
     // Weiterleitung auf MeinBereich
-    window.location = "https://Kuhlschrankverwaltung.chrisfitzer.repl.co/MeinBereich.html";
+    window.location = "https://zealous-brown-3f1929.netlify.app/MeinBereich.html";
   });
 }
 
