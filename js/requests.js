@@ -1,5 +1,5 @@
 // Deklaration der Konstante "url", welche als Base-URL verwendet wird
-const url = "https://famlist-backend.herokuapp.com/"
+const url = "https://famlist-backend.herokuapp.com/api/"
 
 // Asynchrone Funktion die Daten abruft und dazu einen Endpoint und einen Header entgegen nimmt
 async function getData(endpoint = '', headers = {}) {
