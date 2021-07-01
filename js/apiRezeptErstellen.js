@@ -1,7 +1,7 @@
 // Funktion, um neues Rezept an die Datenbank zu schicken
 function sendRezept() {
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
   
   // Auslesen und erstellen der Variable "zutaten" für die Anzahl der Zutaten
   var zutaten = localStorage.getItem('count');
