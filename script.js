@@ -2,7 +2,7 @@
 function sendForm(){
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
 
   // Deklaration der Variable "data", welche die erforderlichen Parameter der API, die vom Benutzer fesgelegten Werte, aus dem Formular speichert 
   var data = {
@@ -34,7 +34,8 @@ function sendForm(){
       alert("Sie haben sich als "+ vorname.value + " " + nachname.value + " registriert. Sie können sich nun einloggen");
       
       // Weiterleitung auf Startseite
-      window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
+      window.location = "
+      //zealous-brown-3f1929.netlify.app/index.html";
     } else {
       alert("Die Email wurde bereits verwendet");
 
@@ -54,7 +55,7 @@ function loginForm() {
   var passwort1 = document.getElementById("passwort1");
   
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/login";
+  var url = "https://famlist-backend.herokuapp.com/api/login";
   
   // Deklaration der Variable "xhr", welche eine Verbindung zur API erstellt
   var xhr = new XMLHttpRequest();
@@ -127,7 +128,7 @@ function name_abfrage() {
     }
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
   
   // Deklaration der Variable "xhr", welche eine Verbindung zur API erstellt
   var xhr = new XMLHttpRequest();
@@ -161,7 +162,7 @@ function einstellungen_abfrage() {
   }
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
   
   // Die Funktion getData wird aufgerufen und die Variablen "global_id" und "headers" sowie der Endpoint "user/" werden übergeben 
   getData('user/' + global_id, headers)
@@ -197,7 +198,7 @@ function deleteUser() {
   }
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
 
   // Die Funktion deleteData wird aufgerufen und die Variablen "global_id" und "headers" sowie der Endpoint "user/" werden übergeben 
   deleteData('user/' + global_id, headers)
@@ -225,7 +226,7 @@ function logoutUser(){
   }
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
     
     // Die Funktion getData wird aufgerufen und die Variable "headers" sowie der Endpoint "logout" werden übergeben 
     getData('logout', headers)
@@ -245,7 +246,7 @@ function logoutUser(){
 function updateUser(){
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
 
   // Abrufen der "global_id" aus dem lokalen Speicher
   var global_id = localStorage.getItem("global_id");
@@ -305,7 +306,7 @@ function bild_abfrage(bild) {
   }
 
   // Deklaration der Variable "url", welche als Base-URL verwendet wird
-  var url = "https://myfridge-backend.herokuapp.com/api/";
+  var url = "https://famlist-backend.herokuapp.com/api/";
   
   // Die Funktion getData wird aufgerufen und die Variablen "global_id" und "headers" sowie der Endpoint "user/" werden übergeben 
   getData('user/' + global_id, headers)
