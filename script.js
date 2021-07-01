@@ -34,8 +34,7 @@ function sendForm(){
       alert("Sie haben sich als "+ vorname.value + " " + nachname.value + " registriert. Sie können sich nun einloggen");
       
       // Weiterleitung auf Startseite
-      window.location = "
-      //zealous-brown-3f1929.netlify.app/index.html";
+      window.location = "https://zealous-brown-3f1929.netlify.app/index.html";
     } else {
       alert("Die Email wurde bereits verwendet");
 
